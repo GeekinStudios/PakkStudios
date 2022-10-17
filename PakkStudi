@@ -1,0 +1,71 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Pakk Studio - By clouted#4003", "Synapse")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Thanks For Picking Pakk Studios <3")
+
+-- Farm
+local Farm = Window:NewTab("Farm")
+local FarmSection = Farm:NewSection("Farm")
+
+
+FarmSection:NewButton("Farm", "Farm your own risk", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/rnbwhBhq'))()
+end)
+
+FarmSection:NewButton("Anti-afk", "Farm your own risk", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/pXefdVGR'))()
+end)
+
+-- Other
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+OtherSection:NewSlider("Walkspeed", "SPEED AT YOUR OWN RISH !!", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+OtherSection:NewSlider("JumpPower", "JUMP AT YOUR OWN RISH !!", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+OtherSection:NewButton("Reset WS/JP", "Resets ti akk defaults !!", 350, 50, function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+OtherSection:NewKeybind("E to close", "ToggleUI", Enum.KeyCode.E, function()
+	Library:ToggleUI()
+end)
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Notification Title", -- Required
+    Text = "Notification Description", -- Required
+    Icon = "rbxassetid://1234567890" -- Optional
+})
+
+
+-- WheelHub
+local WheelHub = Window:NewTab("WheelHub")
+local WheelHubSection = WheelHub:NewSection("WheelHub")
+
+
+WheelHubSection:NewButton("WheelHub", "Joined Discord For Key", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AaronS69420/WheelHub/main/MainFile", true))()
+end)
+
+-- Credits
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("All scripting done by clouted#4003")
+local CreditsSection = Credits:NewSection("UI made by clouted")
+
+local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+
+Module.Prompt({ invite = "https://discord.gg/GdCYFSzz8M", name = "Geekin Stuidos" }) -- name is optional
+
+Module.Join("https://discord.gg/GdCYFSzz8M")
+
+
+setclipboard("https://discord.gg/GdCYFSzz8M")
